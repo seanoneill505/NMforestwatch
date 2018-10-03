@@ -286,8 +286,8 @@ var map = new ol.Map({
   target: 'map_canvas',
   layers: [ Layer_Stamen_terrain,colomunicipal, colocounties, Coloradoeco, Coloradoroads, Coloradotforestroads, Coloradotfrnumbers, local_geoms, Plat_geom, rio_geom, will_geom, meadows_geom],
   view: new ol.View({
-    center: ol.proj.fromLonLat([-107.22,37.51]), 
-    zoom: 10
+    center: ol.proj.fromLonLat([-106.22,35.51]), 
+    zoom: 8
 	
   })
 });
