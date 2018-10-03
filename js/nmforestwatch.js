@@ -134,7 +134,82 @@ var thirtymileFeature = new ol.Feature({
 	geometry: thirtymilePoint
 })
 
+var valleFeature = new ol.Feature({
+	geometry: new ol.geom.Polygon([[
+	[-107.5822707,37.376218],
+	[-107.5790737,37.385417 ],
+	[-107.5607227, 37.403716],
+	[-107.5433707, 37.436194],
+	[-107.5354017, 37.422261],
+	[-107.5363987, 37.409105],
+	[-107.5334937, 37.400082],
+	[-107.5535947, 37.379655],
+	[-107.5700747, 37.371957],
+		]]).transform('EPSG:4326', projection), 
+	name:'Vallecito',
+	style: [block_style]
 
+		
+});
+
+var riogFeature = new ol.Feature({
+	geometry: new ol.geom.Polygon([[
+	[-107.3462757,37.760179],
+	[-107.3408147,37.756557 ],
+	[-107.3368127, 37.751696],
+	[-107.3278797, 37.743476],
+	[-107.3076537, 37.732169],
+	[-107.2841767, 37.72203],
+	[-107.2679237, 37.72179],
+	[-107.2818177, 37.716995],
+	[-107.3450207, 37.745195],
+		]]).transform('EPSG:4326', projection), 
+	name:'Rio Grande Reservoir'
+});
+
+var willFeature = new ol.Feature({
+	geometry: new ol.geom.Polygon([[
+	[-107.2257587,37.503022],
+	[-107.2302757,37.50955 ],
+	[-107.2275187, 37.517652],
+	[-107.2230987, 37.521771],
+	[-107.2194727, 37.519303],
+	[-107.2161787, 37.522545],
+	[-107.2190543, 37.51772],
+	[-107.2233997, 37.502741],
+	
+		]]).transform('EPSG:4326', projection), 
+	name:'Willaims Creek Reservoir'
+});
+
+var platFeature = new ol.Feature({
+	geometry: new ol.geom.Polygon([[
+	[-106.5831017,37.335957],
+	[-106.5831017,37.345096 ],
+	[-106.5541827, 37.35122],
+	[-106.5523697, 37.358981],
+	[-106.5495477, 37.355604],
+	[-106.5468657, 37.349591],
+	[-106.5558657, 37.339986],
+	[-106.5774627, 37.330492],
+	
+		]]).transform('EPSG:4326', projection), 
+	name:'Willaims Creek Reservoir'
+});
+
+
+var meadowsFeature = new ol.Feature({
+	geometry: new ol.geom.Polygon([[
+	[-106.8134887,37.534523],
+	[-106.8098517,37.540444 ],
+	[-106.8034357, 37.542213],
+	[-106.8004527, 37.538044],
+	[-106.8090467, 37.530761],
+	
+	
+		]]).transform('EPSG:4326', projection), 
+	name:'Willaims Creek Reservoir'
+});
 
 			
 		
@@ -265,29 +340,70 @@ var colomunicipal = new ol.layer.Vector({
 	
 })
 
-var colocounties = new ol.layer.Vector({
+var NMcounties = new ol.layer.Vector({
 	source: new ol.source.Vector({
-		url: 'https://data.colorado.gov/api/geospatial/67vn-ijga?method=export&format=KML',
+		url: 'https://rgis-data.unm.edu/ApolloCatalogWMSPublic/service.svc/get?VERSION=1.3.0&REQUEST=GetLegendGraphic&SERVICE=WMS&format=image/png&layer=Census_Designated_Places&style=default',
 		projection: projection,
 		format: new ol.format.KML({
-			extractStyles:false
+			extractStyles:true
 		})
 	}),
 	style: county_style
 })
 
+var local_geoms = new ol.layer.Vector({
+	source: new ol.source.Vector({
+		features: [valleFeature],
+		projection: projection,
+		
+	}),
+	style: Lake_style
+})
 
+var Plat_geom = new ol.layer.Vector({
+	source: new ol.source.Vector({
+		features: [platFeature],
+		projection: projection,
+		
+	}),
+	style: lake2_style
+})
 
+var rio_geom = new ol.layer.Vector({
+	source: new ol.source.Vector({
+		features: [riogFeature],
+		projection: projection,
+		
+	}),
+	style: lake3_style
+})
 
+var will_geom = new ol.layer.Vector({
+	source: new ol.source.Vector({
+		features: [willFeature],
+		projection: projection,
+		
+	}),
+	style: lake4_style
+})
+
+var meadows_geom = new ol.layer.Vector({
+	source: new ol.source.Vector({
+		features: [meadowsFeature],
+		projection: projection,
+		
+	}),
+	style: lake6_style
+})
 
 
 
 var map = new ol.Map({
   target: 'map_canvas',
-  layers: [ Layer_Stamen_terrain,colomunicipal, colocounties, Coloradoeco, Coloradoroads, Coloradotforestroads, Coloradotfrnumbers, local_geoms, Plat_geom, rio_geom, will_geom, meadows_geom],
+  layers: [ Layer_Stamen_terrain,colomunicipal, NMcounties, Coloradoeco, Coloradoroads, Coloradotforestroads, Coloradotfrnumbers, local_geoms, ],
   view: new ol.View({
-    center: ol.proj.fromLonLat([-106.22,35.51]), 
-    zoom: 8
+    center: ol.proj.fromLonLat([-106.22,34.51]), 
+    zoom: 7
 	
   })
 });
