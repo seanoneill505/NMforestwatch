@@ -351,50 +351,9 @@ var colocounties = new ol.layer.Vector({
 	style: county_style
 })
 
-var local_geoms = new ol.layer.Vector({
-	source: new ol.source.Vector({
-		features: [valleFeature],
-		projection: projection,
-		
-	}),
-	style: Lake_style
-})
 
-var Plat_geom = new ol.layer.Vector({
-	source: new ol.source.Vector({
-		features: [platFeature],
-		projection: projection,
-		
-	}),
-	style: lake2_style
-})
 
-var rio_geom = new ol.layer.Vector({
-	source: new ol.source.Vector({
-		features: [riogFeature],
-		projection: projection,
-		
-	}),
-	style: lake3_style
-})
 
-var will_geom = new ol.layer.Vector({
-	source: new ol.source.Vector({
-		features: [willFeature],
-		projection: projection,
-		
-	}),
-	style: lake4_style
-})
-
-var meadows_geom = new ol.layer.Vector({
-	source: new ol.source.Vector({
-		features: [meadowsFeature],
-		projection: projection,
-		
-	}),
-	style: lake6_style
-})
 
 
 
