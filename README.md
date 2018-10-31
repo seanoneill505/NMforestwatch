@@ -22,15 +22,17 @@ The New Mexico Forest Watch portal has the following workflow and technologies:
 * Image collection exported as GeoTiff's
 
 
-# Once Images are exported, Javascript based Workflow to host site
+## Once Images are exported, Javascript based Workflow to host site
 * Images collected into Spatiallite Database repositories
 * Database imported into GeoServer
 * GeoServer Hosts Web Coverage Service (WCS) for images to be served to web
 * Javascript imports images to HTML webpage hosted by GitHub
 * User selects pre-processed datasets to see NDVI time series
 
-## Python API workflow for Google Earth Engine
+# Python API workflow for Google Earth Engine
+## Docker Implementation
 * Creation of a containerized python environment to ease moving the application from host to host/ improved collaboration outcomes
+## Python API Workflow
 * Python script to automate workflow
 * Image Collection retrieval
 * Date Range definition
@@ -42,6 +44,8 @@ The New Mexico Forest Watch portal has the following workflow and technologies:
 * Charts of the time series created
 * Chart values Exported to google storage
 * Images exported as PNG to google storage 
+
+## Web Application hosting
 * Google Cloud Datalab hosted locally 
 * Scripts executed via Ipython (Jupyter notebook)
 * Web application lives in the Google Cloud platform's app engine
