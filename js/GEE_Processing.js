@@ -39,7 +39,6 @@ Export.image.toDrive({
   region: usfsnmaz
 });
 
-
 var addArea = function(feature) {
   return feature.set({areaHa: feature.geometry().area().divide(100 * 100)});
 };
