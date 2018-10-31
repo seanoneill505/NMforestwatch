@@ -29,7 +29,7 @@ The New Mexico Forest Watch portal has the following workflow and technologies:
 * Javascript imports images to HTML webpage hosted by GitHub
 * User selects pre-processed datasets to see NDVI time series
 
-# Python API workflow for Google Earth Engine
+## Python API workflow for Google Earth Engine
 * Creation of a containerized python environment to ease moving the application from host to host/ improved collaboration outcomes
 * Python script to automate workflow
 * Image Collection retrieval
