@@ -2,15 +2,16 @@
 echo "# NMforestwatch" >> README.md
 
 
-# Welcome to the nmforestwatch development portal!
+# Welcome to the NMforestwatch development portal!
 
-The New Mexico Forest Watch portal has the following workflow and technologies:
-* Automation of Data Ingest Via Google Earth Engine (GEE)//Landsat 8 TOA Teir 1 Import to Google Earth Engine via Python script
+The purpose of this README file is to describe the workflows and tools in place to make the NMforestwatch portal a reality.  The NMforestwatch portal has the following workflow and technologies in place:
+
 
 # Javascript//Python interaction with Google Earth Engine API
 >Google Earth Engine makes use of Javascript as well as Python for users to interact with the GEE API.  While this repository has javascript code in place for the workflow, the end goal is using the Python API to increase flexibility of use with the GEE API to automate tasks. The two approaches are similar, but the Python based workflow has critical differences to help automation of all tasks.
 
 # Javascript API workflow for Google Earth Engine 
+* Data Ingest Via Google Earth Engine (GEE)//Landsat 8 TOA Teir 1 Import to Google Earth Engine 
 * Image Collections for New Mexico AOI defined 
 * Datarange of image collections (3 month interval) 
 * Cloud Masking performed over AOI
@@ -23,17 +24,18 @@ The New Mexico Forest Watch portal has the following workflow and technologies:
 
 
 ## Once Images are exported, Javascript based Workflow to host site
-* Images collected into Spatiallite Database repositories
+* Images collected into SpatialLite Database repositories connected to GeoServer
 * Database imported into GeoServer
-* GeoServer Hosts Web Coverage Service (WCS) for images to be served to web
+* GeoServer Hosts Web Coverage Service (WCS) for images to be served to web (found @ http://129.24.65.163:8080/geoserver/web)
 * Javascript imports images to HTML webpage hosted by GitHub
 * User selects pre-processed datasets to see NDVI time series
 
 # Python API workflow for Google Earth Engine
 ## Docker Implementation
 * Creation of a containerized python environment to ease moving the application from host to host/ improved collaboration outcomes
+
 ## Python API Workflow
-* Python script to automate workflow
+* Automation of Data Ingest Via Google Earth Engine (GEE)//Landsat 8 TOA Teir 1 Import to Google Earth Engine
 * Image Collection retrieval
 * Date Range definition
 * AOI definition
