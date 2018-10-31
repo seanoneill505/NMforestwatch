@@ -8,7 +8,7 @@ The New Mexico Forest Watch portal has the following workflow and technologies:
 * Automation of Data Ingest Via Google Earth Engine (GEE)//Landsat 8 TOA Teir 1 Import to Google Earth Engine via Python script
 
 # Javascript//Python interaction with Google Earth Engine API
->Google Earth Engine makes use of Javascript as well as Python for users to interact with the GEE API.  While this repoository has >javascript code in place for the workflow, the end goal is using the Python API to increase flexibility of use with the GEE API to >automate tasks. The two approaches are similar, but the Python based workflow has critical differences to help automation of all tasks.
+>Google Earth Engine makes use of Javascript as well as Python for users to interact with the GEE API.  While this repository has javascript code in place for the workflow, the end goal is using the Python API to increase flexibility of use with the GEE API to automate tasks. The two approaches are similar, but the Python based workflow has critical differences to help automation of all tasks.
 
 # Javascript API workflow for Google Earth Engine 
 * Image Collections for New Mexico AOI defined 
