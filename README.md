@@ -29,7 +29,7 @@ The purpose of this README file is to describe the workflows and tools in place 
   * Earth Engine creates a mean from each pixel within a defined range by using the ee.reduce() function.  The larger the area to create mean statistics, the greater the number of pixels to be defined within the redcer.  
 * Charts for time series created
   * Google has a a function that can also create charts over a time series for an image collection.  The ui.Chart() function is used for this.  ee.Reduce() and ui.Chart() are often used together due to the need to reduce when an area exceeds 10,000,000 pixels. 
-  [Timeserieschart](images/timeserieschart.jpg)
+  ![Timeserieschart](images/timeserieschart.jpg)
 * Values of charts exported
 * Image collection exported as GeoTiff's
   * GEE makes use of three options for exporting data: Exporting to Google Drive, Exporting to a Google Cloud Storage Bucket, and exporting as an asset within a project.  For this project exporting to Google Cloud Storage will provide the most flexibility in terms of workflow outside of the Google Earth Engine umbrella.  
