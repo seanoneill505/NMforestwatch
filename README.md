@@ -85,6 +85,6 @@ The purpose of this README file is to describe the workflows and tools in place 
   * Google app engine used to run 
 * need for local backend greatly reduced 
   * ![Docker_Environment](images/Dockerimage.jpg)
-  image courtesy https://docs.google.com/presentation/d/1MVVeyCdm-FrMVRPop6wB3iyd85TAlwB-F9ygTQZ8S1w/pub?slide=id.g22e6c65aa1_0_6
+  Python Development example image courtesy https://docs.google.com/presentation/d/1MVVeyCdm-FrMVRPop6wB3iyd85TAlwB-F9ygTQZ8S1w/pub?slide=id.g22e6c65aa1_0_6
 
 
