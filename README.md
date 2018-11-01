@@ -38,7 +38,7 @@ The purpose of this README file is to describe the workflows and tools in place 
 * Database imported into GeoServer
   * Geoserver is outfitted with needed libraries to be cognizant of Spatialite Database
 * GeoServer Hosts Web Map Service (WMS) for Vector images to be served to web (found @ http://129.24.65.163:8080/geoserver/web)
-  * Styling and hosting of vector layers to overlay raster images
+  * Styling and hosting of vector layers to overlay raster images; Values derived from Mean calculations joined to polygons in Spatialite database
 * Javascript imports GeoTiff images from Google Storage to HTML webpage
   * Google Cloud storage serves the tiles to base map on web page
 * User selects pre-processed datasets to see NDVI time series for specific polygon sets.
@@ -81,7 +81,11 @@ The purpose of this README file is to describe the workflows and tools in place 
   * Jupyter Notebook hosts live code to the web to automate workflow  
 * Web application lives in the Google Cloud platform's app engine
   * Google app engine used to run GEE processing tools
-* Need for local backend greatly reduced with Google Cloud Services solution  
+* Raster images served to portal via Google storage API
+* Vector images served from Drive via Fusion Table
+  * Mean NDVI values appended to fusion table 
+* User selects polygons on map to see time scale analysis
+* Need for local back-end greatly reduced with Google Cloud Services solution  
  
 
 
