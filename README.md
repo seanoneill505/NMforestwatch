@@ -8,7 +8,7 @@ The purpose of this README file is to describe the workflows and tools in place 
 
 
 # Javascript//Python interaction with Google Earth Engine API
->Google Earth Engine makes use of Javascript as well as Python for users to interact with the GEE API.  While this repository has javascript code in place for the workflow, the end goal is using the Python API to increase flexibility of use with the GEE API to automate tasks. The two approaches are similar, but the Python based workflow has critical differences to help automation of all tasks.
+>Google Earth Engine makes use of Javascript as well as Python for users to interact with the GEE API.  While this repository has javascript code in place for the workflow, the end goal is using the Python API to increase flexibility of use with the GEE API to automate tasks. The two approaches are similar, but the Python based workflow has critical differences to help automation of all tasks.  A GeoServer is made use of in the Javascript solution, while the Python based API inteaction relies more heavily on cloud services.
 
 # Javascript API workflow for Google Earth Engine 
 * Data Ingest Via Google Earth Engine (GEE)//Landsat 8 TOA Teir 1 Import to Google Earth Engine 
@@ -38,9 +38,13 @@ The purpose of this README file is to describe the workflows and tools in place 
 * Images collected into SpatialLite Database repositories connected to GeoServer
   * SpatiaLite is based on SQLite with additional spatial coherence and provides a lightweight database to store tables and vector shapes.    
 * Database imported into GeoServer
+  * Geoserver is outfitted with needed libraries to be cognisant of Spatialite Database
 * GeoServer Hosts Web Map Service (WMS) for Vector images to be served to web (found @ http://129.24.65.163:8080/geoserver/web)
+  * Styling and hosting of vector layers to overlay raster images
 * Javascript imports GeoTiff images from Google Storage to HTML webpage
+  * Google Cloud storage serves the tiles to basemap on web page
 * User selects pre-processed datasets to see NDVI time series for specific polygon sets.
+  * The hope will be all process intensive tasks are done by the time the user comes to the page.  Many GUI ideas can be explored. Either a draggable pin to each polygon, a table containing values, and of course time series charts for data visualisation. 
 
 # Python API workflow for Google Earth Engine
 ## Docker Implementation
@@ -75,7 +79,7 @@ The purpose of this README file is to describe the workflows and tools in place 
 * Google Cloud Datalab hosted locally 
   * Google Cloud Datalab provides a open envirnment to analyze and process data.  It is built on the Jupyter Notebook (IPython) foundation, so there is a large community and knowlegebase to draw from.  Google Cloud Datalab can be used with Google Cloud services, but can also be hosted locally.  In this project Datalab will be hosted locally.
 * Python Scripts Served via Jupyter notebook
-  * 
+  * Jupyter Notebook hosts live code to the web.  
 * Web application lives in the Google Cloud platform's app engine
   * Google app engine used to run 
 * need for local backend greatly reduced 
