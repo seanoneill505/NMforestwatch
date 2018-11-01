@@ -14,7 +14,7 @@ The purpose of this README file is to describe the workflows and tools in place 
 * Data Ingest Via Google Earth Engine (GEE)//Landsat 8 TOA Teir 1 Import to Google Earth Engine 
   **This step is accomplished through importing the imagery from Google Earth engine servers.  Google has a robust catalogue of image collections to choose from, including Landsat (1,2,3,4,5,6,7,8), MODIS, Sentinel (1,2,3), as well as many products derived from these image collections.
 * Image Collections for New Mexico AOI defined 
-  ..* this is accomplished through the ee.Image() function in the Google Earth Engine API.  One of ee.Image() functions is to define polygons and take only imagery intersecting defined polygons.  
+  * This is accomplished through the ee.Image() function in the Google Earth Engine API.  One of ee.Image() functions is to define polygons and take only imagery intersecting defined polygons.  
 * Datarange of image collections (3 month interval) 
 * Cloud Masking performed over AOI
 * NDVI band calculated and added to image 
