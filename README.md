@@ -75,7 +75,8 @@ The purpose of this README file is to describe the workflows and tools in place 
 * Chart values Exported to google storage
 
 * Images exported to google storage 
-
+ * ![Docker_Environment](images/Dockerimage.jpg)
+  Python Development example image courtesy https://docs.google.com/presentation/d/1MVVeyCdm-FrMVRPop6wB3iyd85TAlwB-F9ygTQZ8S1w/pub?slide=id.g22e6c65aa1_0_6
 ## Web Application hosting
 * Google Cloud Datalab hosted locally 
   * Google Cloud Datalab provides an open environment to analyze and process data.  It is built on the Jupyter Notebook (IPython) foundation, so there is a large community and knowledgebase to draw from.  Google Cloud Datalab can be used with Google Cloud services but can also be hosted locally.  In this project Datalab will be hosted locally.
@@ -83,8 +84,7 @@ The purpose of this README file is to describe the workflows and tools in place 
   * Jupyter Notebook hosts live code to the web.  
 * Web application lives in the Google Cloud platform's app engine
   * Google app engine used to run 
-* need for local backend greatly reduced 
-  * ![Docker_Environment](images/Dockerimage.jpg)
-  Python Development example image courtesy https://docs.google.com/presentation/d/1MVVeyCdm-FrMVRPop6wB3iyd85TAlwB-F9ygTQZ8S1w/pub?slide=id.g22e6c65aa1_0_6
+* Need for local backend greatly reduced  
+ 
 
 
