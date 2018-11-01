@@ -14,19 +14,21 @@ The purpose of this README file is to describe the workflows and tools in place 
 * Data Ingest Via Google Earth Engine (GEE)//Landsat 8 TOA Teir 1 Import to Google Earth Engine 
   * This step is accomplished through importing the imagery from Google Earth engine servers.  Google has a robust catalogue of image collections to choose from, including Landsat (1,2,3,4,5,6,7,8), MODIS, Sentinel (1,2,3), as well as many products derived from these image collections.
 * Image Collections for New Mexico AOI defined 
-  * This is accomplished through the ee.ImageCollection() function in the Google Earth Engine API.  One of ee.Image() functions is to define polygons and take only imagery intersecting defined polygons.  
+  * This is accomplished through the ee.ImageCollection() .filter); function in the Google Earth Engine API.  One of ee.Image() functions is to define polygons and take only imagery intersecting defined polygons.  
 * Datarange of image collections (3 month interval)
   * Also handled by the ee.ImageCollection() function, selecting date ranges for Imagery availible inthe GEE catalogue.
 * Creating a quality mosiac and eliminating as many discontinuities in the selected image collection as possible.
   * This is accomplished with the qualityMosiac() function.  qualityMosiac() can make the disparate spectral values coused by image collecttion time differences (time between sattelite passes) in vegitation more congruent by attempting to set pixel values from the same stage of growth of the vegitation being imaged. 
 * Cloud Masking performed over AOI
-  * Cloud masking can be accomplished in a few different ways with the GEE API.  One option is Median.Reduce(), which pulls cloud free data from the selected image collections over the defined date range.  The problem with this method can be short date ranges.  The shorter the date range, the less opportunity for cloud free imagery exists.  The other method is ; 
+  * Cloud masking is accomplished by using the Median.Reduce() function, which can pull cloud free data from the selected image collections over the defined date range.  The pootential problem with this method can be found with short short date ranges.  The shorter the date range, the less opportunity for cloud free imagery exists.  Another method for cloud free mosiacs is using the ee.Algorithms.Landsat.simpleCloudScore() function.  Here, a score is assigned to pixels between 1 and 100, with the higher the number representing a cloudier pixel.  The user can define a preferable score for the pixels over a image collection. Then the scored.select(['cloud']).lte(%%) can be used to mask the clouds in the images.  
 * NDVI band calculated and added to image 
-  * Here, the %%.map() function is used to apply the NDVI band to the entire image collection 
+  * Here, the %%.map() function is used to apply the NDVI band to the entire image collection.  While an NDVI calculation is trivial with the availible tools for manipulating bands (example: var nir = image.select('B5'); var red = image.select('B4'); var ndvi = nir.subtract(red).divide(nir.add(red)).rename('NDVI');) an NDVI layer is also provided due to the ubuquitous nature of NDVI usage in remote sensing realms. The pre-computed NDVI can simply be added to the map and analyzed.  
 * Feature collections defined/ Hosted as Google Fusion Table
-  *
+  * Shapefiles can be converted into .KML files and then can be uploaded as tables to Google's Drive service as Fusion Tables.  Since the tables are hosted by Google in the cloud, the tables can then be imported into Earth Engine and can be used for analysis over each feature in the feature collection.  
 * Mean NDVI calculated from individual pixels to perform time scale analysis over vector polygons
+  * Earth Engine creates a mean from each pixel within a defined range by using the ee.reduce() function.  The larger the area to create mean statistics, the greater the number of pixels to be defined within the redcer.  
 * Charts for time series created
+  * Google has a a function that can also create charts over a time series for an image collection.  The ui.Chart() function is used for this.  ee.Reduce() and ui.Chart() are often used together due to the need to reduce when an area exceeds 10,000,000 pixels. 
 * Values of charts exported
 * Image collection exported as GeoTiff's
 
@@ -40,7 +42,7 @@ The purpose of this README file is to describe the workflows and tools in place 
 
 # Python API workflow for Google Earth Engine
 ## Docker Implementation
-* Creation of a containerized python environment to ease moving the application from host to host/ improved collaboration outcomes
+* Creation of a containerized python environment for transportability from host to host and improved collaboration opportunities and outcomes.  
 
 ## Python API Workflow
 * Automation of Data Ingest Via Google Earth Engine (GEE)//Landsat 8 TOA Teir 1 Import to Google Earth Engine
