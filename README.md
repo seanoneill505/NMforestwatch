@@ -82,10 +82,10 @@ The purpose of this README file is to describe the workflows and tools in place 
 * Google Cloud Datalab hosted locally 
   * Google Cloud Datalab provides an open environment to analyze and process data.  It is built on the Jupyter Notebook (IPython) foundation, so there is a large community and knowledgebase to draw from.  Google Cloud Datalab can be used with Google Cloud services but can also be hosted locally.  In this project Datalab will be hosted locally.
 * Python Scripts Served via Jupyter notebook
-  * Jupyter Notebook hosts live code to the web.  
+  * Jupyter Notebook hosts live code to the web to automate workflow  
 * Web application lives in the Google Cloud platform's app engine
-  * Google app engine used to run 
-* Need for local backend greatly reduced  
+  * Google app engine used to run GEE processing tools
+* Need for local backend greatly reduced with Google Cloud Services solution  
  
 
 
