@@ -12,13 +12,19 @@ The purpose of this README file is to describe the workflows and tools in place 
 
 # Javascript API workflow for Google Earth Engine 
 * Data Ingest Via Google Earth Engine (GEE)//Landsat 8 TOA Teir 1 Import to Google Earth Engine 
-  **This step is accomplished through importing the imagery from Google Earth engine servers.  Google has a robust catalogue of image collections to choose from, including Landsat (1,2,3,4,5,6,7,8), MODIS, Sentinel (1,2,3), as well as many products derived from these image collections.
+  * This step is accomplished through importing the imagery from Google Earth engine servers.  Google has a robust catalogue of image collections to choose from, including Landsat (1,2,3,4,5,6,7,8), MODIS, Sentinel (1,2,3), as well as many products derived from these image collections.
 * Image Collections for New Mexico AOI defined 
-  * This is accomplished through the ee.Image() function in the Google Earth Engine API.  One of ee.Image() functions is to define polygons and take only imagery intersecting defined polygons.  
-* Datarange of image collections (3 month interval) 
+  * This is accomplished through the ee.ImageCollection() function in the Google Earth Engine API.  One of ee.Image() functions is to define polygons and take only imagery intersecting defined polygons.  
+* Datarange of image collections (3 month interval)
+  * Also handled by the ee.ImageCollection() function, selecting date ranges for Imagery availible inthe GEE catalogue.
+* Creating a quality mosiac and eliminating as many discontinuities in the selected image collection as possible.
+  * This is accomplished with the qualityMosiac() function.  qualityMosiac() can make the disparate spectral values coused by image collecttion time differences (time between sattelite passes) in vegitation more congruent by attempting to set pixel values from the same stage of growth of the vegitation being imaged. 
 * Cloud Masking performed over AOI
+  * Cloud masking can be accomplished in a few different ways with the GEE API.  One option is Median.Reduce(), which pulls cloud free data from the selected image collections over the defined date range.  The problem with this method can be short date ranges.  The shorter the date range, the less opportunity for cloud free imagery exists.  The other method is ; 
 * NDVI band calculated and added to image 
+  * Here, the %%.map() function is used to apply the NDVI band to the entire image collection 
 * Feature collections defined/ Hosted as Google Fusion Table
+  *
 * Mean NDVI calculated from individual pixels to perform time scale analysis over vector polygons
 * Charts for time series created
 * Values of charts exported
