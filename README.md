@@ -1,16 +1,13 @@
-
-
-
 # Welcome to the NMforestwatch development portal!
 
-The purpose of this README file is to describe the workflows and tools in place to make the NMforestwatch portal a reality.  The NMforestwatch portal has the following workflow and technologies in place:
+The purpose of this README file is to describe the workflows and tools in place to make the NMforestwatch portal a reality.  While this project is very much still in development, outlined below is the current state in the development cycle. 
 
 
 # Javascript//Python interaction with Google Earth Engine API
->Google Earth Engine makes use of Javascript as well as Python for users to interact with the GEE API.  While this repository has javascript code in place for the workflow, the end goal is using the Python API to increase flexibility of use with the GEE API to automate tasks. The two approaches are similar, but the Python based workflow has critical differences to help automation of all tasks.  A GeoServer is made use of in the Javascript solution, while the Python based API interaction relies more heavily on cloud services.
+>Google Earth Engine (GEE) makes use of Javascript as well as Python for users to interact with the GEE API.  While this repository has javascript code in place for the workflow, the end goal is using the Python API to increase flexibility of use with the GEE API to automate tasks. The two approaches are similar, but the Python based workflow has critical differences to help automation of all tasks.  A GeoServer is made use of in the Javascript solution, while the Python based API interaction relies more heavily on cloud services.
 
 # Javascript API workflow for Google Earth Engine 
-* Data Ingest Via Google Earth Engine (GEE)//Landsat 8 TOA Tier 1 Import to Google Earth Engine 
+* Data Ingest Via Google Earth Engine //Landsat 8 TOA Tier 1 Import to Google Earth Engine 
   * This step is accomplished through importing the imagery from Google Earth engine servers.  Google has a robust catalogue of image collections to choose from, including Landsat (1,2,3,4,5,6,7,8), MODIS, Sentinel (1,2,3), as well as many products derived from these image collections.
 * Image Collections for New Mexico AOI defined 
   * This is accomplished through the ee.ImageCollection() .filter); function in the Google Earth Engine API.  One of ee.Image() functions is to define polygons and take only imagery intersecting defined polygons.  
