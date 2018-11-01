@@ -31,36 +31,53 @@ The purpose of this README file is to describe the workflows and tools in place 
   * Google has a a function that can also create charts over a time series for an image collection.  The ui.Chart() function is used for this.  ee.Reduce() and ui.Chart() are often used together due to the need to reduce when an area exceeds 10,000,000 pixels. 
 * Values of charts exported
 * Image collection exported as GeoTiff's
+  * GEE makes use of three options for exporting data: Exporting to Google Drive, Exporting to a Google Cloud Storage Bucket, and exporting as an asset within a project.  For this project exporting to Google Cloud Storage will provide the most flexibility in terms of workflow outside of the Google Earth Engine umbrella.  
 
 
 ## Once Images are exported, Javascript based Workflow to host site
 * Images collected into SpatialLite Database repositories connected to GeoServer
+  * SpatiaLite is based on SQLite with additional spatial coherence and provides a lightweight database to store tables and vector shapes.    
 * Database imported into GeoServer
-* GeoServer Hosts Web Coverage Service (WCS) for images to be served to web (found @ http://129.24.65.163:8080/geoserver/web)
-* Javascript imports images to HTML webpage hosted by GitHub
-* User selects pre-processed datasets to see NDVI time series
+* GeoServer Hosts Web Map Service (WMS) for Vector images to be served to web (found @ http://129.24.65.163:8080/geoserver/web)
+* Javascript imports GeoTiff images from Google Storage to HTML webpage
+* User selects pre-processed datasets to see NDVI time series for specific polygon sets.
 
 # Python API workflow for Google Earth Engine
 ## Docker Implementation
 * Creation of a containerized python environment for transportability from host to host and improved collaboration opportunities and outcomes.  
+  * One of the challenges with the Python language is that specific environments can produce differing results.  With Docker, one environment can be created and replicated in different computing environments, ensuring that scripts that have dependancies to run have these specific requirements met. Another advantage of a containerized solution is troubleshooting with a community. Google Earth engine provides a standardized python installation that can easily be replicated for community based problem solving. 
+## Python API Workflow 
+### Functions remain the same as Javascript unless otherwise noted
+* Authenticate to Google Earth Engine
+  * A key difference in the Python API is that reqquests to Earth Engine Servers need to be authenticated with a unique key.  These authentication procedures need to be adhered to for the Earth Engine servers to repond to requests. Authentication will be done by using Google Service account that is tied to the web application. The service account will make use of a private and public key (Asymmetric Cryptography), so the service account authenticates to the Earth Engine servers so the public can veiw the web application without a need for a public key.  
 
-## Python API Workflow
 * Automation of Data Ingest Via Google Earth Engine (GEE)//Landsat 8 TOA Teir 1 Import to Google Earth Engine
-* Image Collection retrieval
+
+* Image Collection for New Mexico AIO defined
+  
 * Date Range definition
-* AOI definition
+  
 * Cloud Masking over AOI
+  
 * NDVI band added
+  
 * Feature Collections Vectors imported from Fusion Tables
+
 * Mean NDVI calculated for Polygons
+
 * Charts of the time series created
+
 * Chart values Exported to google storage
-* Images exported as PNG to google storage 
+
+* Images exported to google storage 
 
 ## Web Application hosting
 * Google Cloud Datalab hosted locally 
-* Scripts executed via Ipython (Jupyter notebook)
+  * Google Cloud Datalab provides a open envirnment to analyze and process data.  It is built on the Jupyter Notebook (IPython) foundation, so there is a large community and knowlegebase to draw from.  Google Cloud Datalab can be used with Google Cloud services, but can also be hosted locally.  In this project Datalab will be hosted locally.
+* Python Scripts Served via Jupyter notebook
+  * 
 * Web application lives in the Google Cloud platform's app engine
+  * Google app engine used to run 
 * need for local backend greatly reduced 
 
 
