@@ -1,5 +1,4 @@
-# NMforestwatch
-echo "# NMforestwatch" >> README.md
+
 
 
 # Welcome to the NMforestwatch development portal!
