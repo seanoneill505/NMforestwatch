@@ -30,7 +30,7 @@ It may be helpful to visualize the map to suite your personal preference.
 * To see what area(s) you have selected click the View Attributes button.  A table will be produced with attributes of the polygon. 
 * When a user wants to perform additional analysis, click the clear results button to reset the map. 
 
-![NMFW_View](images/Charting3.jpg)
+![NMFW_Char3](images/Charting3.jpg)
 * The chart can be viewed in full screen by clicking the callout button, from here the chart can also be exported as a .CSV, .SVG, or .PNG file. 
-![NMFW_View](images/Charting4.jpg)
+![NMFW_Chart4](images/Charting4.jpg)
 
