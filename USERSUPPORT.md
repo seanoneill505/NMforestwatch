@@ -22,5 +22,9 @@ It may be helpful to visualize the map to suite your personal preference.
    * Also provided are controls for individual layers.  Here, the user can change opacity of either the Visualization layer, the Forest layer, or the Selected forest layer.  
 * Base Map Control
   * The Base Map controls define the imagery NMFW data is displayed over.  The user can select from a Map view with Terrain option or a satellite view with a labels option. 
+
+
 ![NMFW_Layers](images/layer_control.jpg)
+### Charting Results
+* When a user makes their selection, a chart is produced.  The chart will show the Median of all 30 meter Pixels within the polygon selection.  A linear trend analysis is also included on the chart 
 ![NMFW_View](images/Charting.jpg)
