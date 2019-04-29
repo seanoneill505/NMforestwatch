@@ -14,5 +14,5 @@ The user is provided three basic functions to analyze National Forests in New Me
   * Once the date range and forest filter are selected, the user can click within a polygon to analyze a linear trend of NDVI values for the selected polygon.  The polygons are additive, so a user can choose Gila national forest in addition to Cibola National Forest and the results will e both polygon values. 
   ![NMFW_View](images/NMFW_overallview.jpg)
 
-** opacity of layers
+ ** opacity of layers
 It may be helpful to visualize the map to suite your personal preference.  Included in the inspector pane is a opcity slider to control all NMFW layers.  This is useful to see the chosen base map in context of the forest health data overlayed.   
