@@ -2,7 +2,7 @@
 
 The purpose of this file is to provide support for end-users of the NMFORESTWATCH portal. If you are looking for more information and background on the project, please view the project development portal: [NMForestWatch Development Portal](https://seanoneill505.github.io/NMforestwatch/DEVELOPMENT.html) 
 
-# How to use NMFOREST WATCH
+## How to use NMFOREST WATCH
 ### User Input Controls
 The New Mexico Forest Watch (NMFW) project is designed to give a wide range of end users the capability to perform analysis on integrative forest health in Neww Mexico.  The data is based on the Normalized Difference Vegitation Index (NDVI) taken from Landsat 8 imagery. 
 
@@ -25,8 +25,9 @@ It may be helpful to visualize the map to suite your personal preference.
 
 
 ![NMFW_Layers](images/layer_control.jpg)
-### Charting Results
+## Charting Results
 * When a user makes their selection, a chart is produced.  The chart will show the Median value of all 30 meter Pixels within the polygon selection for each month making an annual chart.  A linear trend analysis is also included on the chart to give a user an indication of a declining, constant, or rising NDVI value within the selected area. 
+* To see what area(s) you have selected click the View Attributes button.  A table will be produced with attributes of the polygon. 
 * When a user wants to perform additional analysis, click the clear results button to reset the map. 
 * The chart can be viewed in full screen by clicking the callout button, from here the chart can also be exported as a .CSV, .SVG, or .PNG file.  
 ![NMFW_View](images/Charting3.jpg)
