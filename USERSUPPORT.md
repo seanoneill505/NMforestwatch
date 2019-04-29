@@ -1,6 +1,6 @@
 # Welcome to the NMforestwatch User Support!
 
-The purpose of this file is to provide support for end-users of the NMFORESTWATCH portal. TO view the project Development portal follow the link. [NMForestWatch Development Portal](https://seanoneill505.github.io/NMforestwatch/DEVELOPMENT.html) 
+The purpose of this file is to provide support for end-users of the NMFORESTWATCH portal. If you are looking for more information and background on the project, please view the project development portal: [NMForestWatch Development Portal](https://seanoneill505.github.io/NMforestwatch/DEVELOPMENT.html) 
 
 # How to use NMFOREST WATCH
 ### User Input Controls
