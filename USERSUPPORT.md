@@ -22,4 +22,4 @@ It may be helpful to visualize the map to suite your personal preference.
   * Also provided are controls for individual layers.  Here, the user can change opacity of either the Visualization layer, the Forest layer, or the Selected forest layer.  
 * Base Map Control
  * The Base Map controls define the imagery NMFW data is displayed over.  The user can select from a Map view with Terrain option
- ![NMFW_View](images/Charting.jpg)
+![NMFW_View](images/Charting.jpg)
