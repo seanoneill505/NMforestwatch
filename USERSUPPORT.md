@@ -26,5 +26,5 @@ It may be helpful to visualize the map to suite your personal preference.
 
 ![NMFW_Layers](images/layer_control.jpg)
 ### Charting Results
-* When a user makes their selection, a chart is produced.  The chart will show the Median of all 30 meter Pixels within the polygon selection.  A linear trend analysis is also included on the chart to give a user an indication of a declining, constant, or rising NDVI value within the selected area. 
+* When a user makes their selection, a chart is produced.  The chart will show the Median value of all 30 meter Pixels within the polygon selection for each month making an annual chart.  A linear trend analysis is also included on the chart to give a user an indication of a declining, constant, or rising NDVI value within the selected area. 
 ![NMFW_View](images/Charting.jpg)
