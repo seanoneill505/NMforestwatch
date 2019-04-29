@@ -17,9 +17,9 @@ The user is provided three basic functions to analyze National Forests in New Me
  ### Layer Control
 It may be helpful to visualize the map to suite your personal preference.  
  * Opacity Slider 
-  * Included in the inspector pane is a opcity slider to control all NMFW layers.  This is useful to see the chosen base map in context of the forest health data overlayed.   
+   * Included in the inspector pane is a opcity slider to control all NMFW layers.  This is useful to see the chosen base map in context of the forest health data overlayed.   
  * Layer Control
-  * Also provided are controls for individual layers.  Here, the user can change opacity of either the Visualization layer, the Forest layer, or the Selected forest layer.  
+   * Also provided are controls for individual layers.  Here, the user can change opacity of either the Visualization layer, the Forest layer, or the Selected forest layer.  
 * Base Map Control
- * The Base Map controls define the imagery NMFW data is displayed over.  The user can select from a Map view with Terrain option
+  * The Base Map controls define the imagery NMFW data is displayed over.  The user can select from a Map view with Terrain option or a satellite view with a labels option. 
 ![NMFW_View](images/Charting.jpg)
