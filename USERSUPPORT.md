@@ -32,5 +32,5 @@ It may be helpful to visualize the map to suite your personal preference.
 
 ![NMFW_Char3](images/Charting3.jpg)
 * The chart can be viewed in full screen by clicking the callout button, from here the chart can also be exported as a .CSV, .SVG, or .PNG file. 
-![NMFW_Chart4](images/Charting4.jpg)
+![NMFW_Chart4](images/Charting5.jpg)
 
