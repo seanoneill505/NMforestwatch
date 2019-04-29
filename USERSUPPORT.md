@@ -34,3 +34,4 @@ It may be helpful to visualize the map to suite your personal preference.
 * The chart can be viewed in full screen by clicking the callout button, from here the chart can also be exported as a .CSV, .SVG, or .PNG file. 
 ![NMFW_Chart4](images/Charting5.jpg)
 
+For more information or to report bugs on the portal, email ronbeel@unm.edu or oneill505@gmail.com
