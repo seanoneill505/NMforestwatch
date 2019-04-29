@@ -1,4 +1,4 @@
-# Welcome to the NMforestwatch User Support!
+# Welcome to the NMforestwatch User Support Portal!
 
 The purpose of this file is to provide support for end-users of the NMFORESTWATCH portal. If you are looking for more information and background on the project, please view the project development portal: [NMForestWatch Development Portal](https://seanoneill505.github.io/NMforestwatch/DEVELOPMENT.html) 
 
@@ -29,5 +29,8 @@ It may be helpful to visualize the map to suite your personal preference.
 * When a user makes their selection, a chart is produced.  The chart will show the Median value of all 30 meter Pixels within the polygon selection for each month making an annual chart.  A linear trend analysis is also included on the chart to give a user an indication of a declining, constant, or rising NDVI value within the selected area. 
 * To see what area(s) you have selected click the View Attributes button.  A table will be produced with attributes of the polygon. 
 * When a user wants to perform additional analysis, click the clear results button to reset the map. 
-* The chart can be viewed in full screen by clicking the callout button, from here the chart can also be exported as a .CSV, .SVG, or .PNG file.  
+
 ![NMFW_View](images/Charting3.jpg)
+* The chart can be viewed in full screen by clicking the callout button, from here the chart can also be exported as a .CSV, .SVG, or .PNG file. 
+![NMFW_View](images/Charting4.jpg)
+
