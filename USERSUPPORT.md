@@ -4,7 +4,7 @@ The purpose of this file is to provide support for end-users of the NMFORESTWATC
 
 # How to use NMFOREST WATCH
 ### User Input Controls
-The New Mexico Forest Watch (NMFW) project is designed to give a wide range of end users the capability to perform analysis on integrative forest health in Neww Mexico.  
+The New Mexico Forest Watch (NMFW) project is designed to give a wide range of end users the capability to perform analysis on integrative forest health in Neww Mexico.  The data is based on the Normalized Difference Vegitation Index (NDVI) taken from Landsat 8 imagery. 
 
 The user is provided three basic functions to analyze National Forests in New Mexico:
 * Date Range Selector
@@ -26,5 +26,5 @@ It may be helpful to visualize the map to suite your personal preference.
 
 ![NMFW_Layers](images/layer_control.jpg)
 ### Charting Results
-* When a user makes their selection, a chart is produced.  The chart will show the Median of all 30 meter Pixels within the polygon selection.  A linear trend analysis is also included on the chart to give a user an indication of a declining, constant, or raising NDVI within the selected area. 
+* When a user makes their selection, a chart is produced.  The chart will show the Median of all 30 meter Pixels within the polygon selection.  A linear trend analysis is also included on the chart to give a user an indication of a declining, constant, or rising NDVI value within the selected area. 
 ![NMFW_View](images/Charting.jpg)
