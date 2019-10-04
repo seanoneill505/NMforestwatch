@@ -17,7 +17,7 @@ collection = (ee.ImageCollection('LANDSAT/LE07/C01/T1')
                           datetime.datetime(2000, 7, 1)))
 image1 = collection.median()
 
-# Clip to the output image to the California state boundary.
+# Clip to the output image to the  state boundary.
 fc = (ee.FeatureCollection('ft:1fRY18cjsHzDgGiJiS2nnpUU3v9JPDc2HNaR7Xk8')
       .filter(ee.Filter().eq('Name', 'California')))
 image2 = image1.clipToCollection(fc)
